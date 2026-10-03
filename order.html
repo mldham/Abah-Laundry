@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Order Laundry</title>
+
+    <link rel="stylesheet" href="order.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <img src="img/Logo.png" alt="" width="70" />
+      <h2><span style="color: #0284c7">LAUNDRY</span> ABAH</h2>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Layanan</a>
+        <a href="#">Tentang</a>
+        <a href="order.html" class="aktif">Order</a>
+      </nav>
+    </header>
+
+    <main class="isi">
+      <div class="judul-halaman">
+        <h1>Order Laundry</h1>
+        <p>Isi dulu ya kalau mau order laundry Abah Roces</p>
+      </div>
+
+      <div class="order-box">
+        <form id="form_order_laundry" action="order.php" method="post">
+          <section class="form-order">
+            <h2>Pilih Layanan</h2>
+            <p class="keterangan">
+              Mau laundry kayak gimana bos.
+            </p>
+            <div class="bagian-layanan">
+              <div class="jenis-layanan">
+                <input
+                  type="radio"
+                  name="layanan"
+                  id="kiloan"
+                  value="Laundry Kiloan"
+                  data-harga="7000"
+                />
+                <label for="kiloan">
+                  <div class="ikon-layanan">
+                    <img src="img/Kiloan.png" alt="" width="120px" />
+                  </div>
+                  <div class="info-layanan">
+                    <h3>Laundry Kiloan</h3>
+                    <p>Cocok buat sehari-hari.</p>
+                    <strong> Rp7.000 / kg </strong>
+                  </div>
+                </label>
+              </div>
+              <div class="jenis-layanan">
+                <input
+                  type="radio"
+                  name="layanan"
+                  id="express"
+                  value="Laundry Express"
+                  data-harga="12000"
+                />
+                <label for="express">
+                  <div class="ikon-layanan">
+                    <img src="img/express.png" alt="" width="75px" />
+                  </div>
+                  <div class="info-layanan">
+                    <h3>Laundry Express</h3>
+                    <p>Selesai 3 jam aje.</p>
+                    <strong> Rp12.000 / kg </strong>
+                  </div>
+                </label>
+              </div>
+              <div class="jenis-layanan">
+                <input
+                  type="radio"
+                  name="layanan"
+                  id="sepatu"
+                  value="Laundry Sepatu"
+                  data-harga="15000"
+                />
+                <label for="sepatu">
+                  <div class="ikon-layanan">
+                    <img src="img/sepatu.png" width="120px" alt="" />
+                  </div>
+                  <div class="info-layanan">
+                    <h3>Laundry Sepatu</h3>
+                    <p>Membersihkan sepatu kotor Anda.</p>
+                    <strong> Rp15.000 / pasang </strong>
+                  </div>
+                </label>
+              </div>
+              <div class="jenis-layanan">
+                <input
+                  type="radio"
+                  name="layanan"
+                  id="selimut"
+                  value="Laundry Selimut"
+                  data-harga="20000"
+                />
+                <label for="selimut">
+                  <div class="ikon-layanan">
+                    <img src="img/selimut.png" width="120px" />
+                  </div>
+                  <div class="info-layanan">
+                    <h3>Laundry Selimut</h3>
+                    <p>ini Khusus buat selimut dan bed cover aja ye.</p>
+                    <strong> Rp20.000 / pcs </strong>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="bagian-form">
+              <h2>Data Pelanggan</h2>
+              <div class="grup-form">
+                <label for="nama"> Nama Lengkap </label>
+                <input
+                  type="text"
+                  id="nama"
+                  name="nama"
+                  required
+                  placeholder="Masukkan nama lengkap"
+                />
+              </div>
+              <div class="baris-form">
+                <div class="grup-form">
+                  <label for="telepon"> Nomor WhatsApp </label>
+                  <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx" required />
+                </div>
+                <div class="grup-form">
+                  <label for="tanggal"> Tanggal Pickup </label>
+                  <input type="date" id="tanggal" name="tanggal" required />
+                </div>
+              </div>
+              <div class="grup-form">
+                <label for="alamat"> Alamat Pickup </label>
+                <textarea
+                  id="alamat"
+                  name="alamat"
+                  rows="4"
+                  required
+                  placeholder="Masukkan alamat lengkap..."
+                ></textarea>
+              </div>
+              <div class="grup-form">
+                <label for="catatan"> Catatan </label>
+                <textarea
+                  id="catatan"
+                  name="catatan"
+                  rows="3"
+                  placeholder="Contoh: Tolong pisahkan pakaian putih."
+                ></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="tombol-order">
+              Lanjutkan Order →
+            </button>
+          </section>
+        </form>
+
+        <aside class="ringkasan">
+          <h2>Ringkasan Order</h2>
+          <div class="item-ringkasan">
+            <span>Layanan</span>
+            <strong id="ringkasanLayanan"> Belum dipilih </strong>
+          </div>
+          <div class="item-ringkasan">
+            <span>Harga</span>
+            <strong id="ringkasanHarga"> - </strong>
+          </div>
+          <div class="item-ringkasan">
+            <span>Nama</span>
+            <strong id="ringkasanNama"> - </strong>
+          </div>
+          <div class="item-ringkasan">
+            <span>Tanggal Pickup</span>
+            <strong id="ringkasanTanggal"> - </strong>
+          </div>
+          <hr />
+          <div class="total">
+            <span>Estimasi Harga</span>
+            <strong id="totalHarga"> Rp0 </strong>
+          </div>
+
+          <div class="kotak-info">
+            <span>
+              Nanti Harga akhirnya bisa berubah berdasarkan berat atau jumlah barangnya
+              setelah ditimbang.
+            </span>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <script src="order.js"></script>
+  </body>
+</html>

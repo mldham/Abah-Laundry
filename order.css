@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');  
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+/* navbar*/
+
+.navbar {
+  height: 100px;
+  top: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  z-index: 100;
+}
+
+.navbar img {
+  border-radius: 40px;
+}
+
+.navbar h2 {
+  padding-left: 20px;
+  font-size: 20pt;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #555;
+  font-size: 15px;
+}
+
+.navbar a.aktif {
+  color: #0284c7;
+  font-weight: bold;
+}
+
+/*isi*/
+.isi {
+  padding-top: 50px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.judul-halaman {
+  margin-bottom: 35px;
+}
+
+.judul-halaman h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.judul-halaman p {
+  color: #777;
+}
+
+.langkah {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 40px;
+}
+
+.order-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  gap: 30px;
+}
+
+.form-order {
+  background: white;
+  padding: 30px;
+  border-radius: 19px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-order h2 {
+  margin-bottom: 8px;
+}
+
+.keterangan {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/*layanan*/
+
+.bagian-layanan {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.jenis-layanan {
+  position: relative;
+}
+
+.jenis-layanan input {
+  display: none;
+}
+
+.jenis-layanan label {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.jenis-layanan label:hover {
+  border-color: #0284c7;
+}
+
+.jenis-layanan input:checked + label {
+  border-color: #0284c7;
+  background: #f0f8ff;
+}
+
+.ikon-layanan {
+  font-size: 35px;
+}
+
+.info-layanan h3 {
+  margin-bottom: 6px;
+}
+
+.info-layanan p {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.info-layanan strong {
+  color: #0284c7;
+}
+
+/* bagian form*/
+
+.bagian-form {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+}
+
+.grup-form {
+  margin-bottom: 20px;
+}
+
+.grup-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.grup-form input,
+.grup-form textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 11px;
+  font-family: inherit;
+  outline: none;
+}
+
+.grup-form input:focus,
+.grup-form textarea:focus {
+  border-color: #0284c7;
+}
+
+.baris-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* tombol lanjut*/
+.tombol-order {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 11px;
+  background: #f97316;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tombol-order:hover {
+  background: #c85302;
+}
+
+/* rincian harga*/
+.ringkasan {
+  background: white;
+  padding: 25px;
+  border-radius: 19px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ringkasan h2 {
+  margin-bottom: 25px;
+}
+
+.item-ringkasan {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.item-ringkasan span {
+  color: #777;
+}
+
+.item-ringkasan strong {
+  text-align: right;
+}
+
+.ringkasan hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+}
+
+.total strong {
+  color: #0284c7;
+}
+
+/*disclaimer*/
+.kotak-info {
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff8e1;
+  font-size: 13px;
+  color: #795548;
+}
+
+/*settingan mode mobile*/
+@media (max-width: 800px) {
+  .order-box {
+    grid-template-columns: 1fr;
+  }
+
+  .ringkasan {
+    position: static;
+  }
+
+  .bagian-layanan {
+    grid-template-columns: 1fr;
+  }
+
+  .baris-form {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .navbar nav {
+    gap: 12px;
+  }
+
+  .langkah {
+    font-size: 12px;
+  }
+
+  .garis {
+    width: 30px;
+  }
+}
