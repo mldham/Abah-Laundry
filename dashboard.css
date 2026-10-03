@@ -1,0 +1,320 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'poppins';
+    background-color: #ffffff;
+  }
+
+  .button-utama {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo jadi di kiri kanan */
+  width: 100%;
+  padding: 0px 0px;
+  background: transparent;
+  backdrop-filter: blur(4px);
+  background-color: rgba(35, 141, 247, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*fitur atas kanan*/
+.pitur {
+  padding-left: px
+}
+
+/* biar keren jadi kesamping */
+.nav-links {
+  list-style: none;
+    display: flex;
+    margin-left: 800px;
+    gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+    color: white;
+    font-weight: 700;
+    position: relative;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    padding-bottom: 4px; /* kasih jarak dikit biar rapi */
+}
+
+.nav-links li a:hover {
+  color: #f7931e;
+  border-bottom: 2px solid #f77f00; 
+}
+
+  .logo {
+    font-size: 1.8rem;
+    padding-left: 10px;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+  }
+
+  .background-utama-atas {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('terumbu-karang.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 50px 50px;
+    text-align: center;
+    position: relative;
+  }
+
+  .highlig{
+    position: relative;
+    z-index: 1;
+  }
+
+  /*bagian list harga*/ 
+  .listharga {
+  text-align: center;
+  background-color: #f4f4f4;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 40px;
+  font-family: sans-serif;
+}
+
+/*sorotan harga*/
+.sorotan {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  overflow-x: auto;
+  padding: 20px 10px;
+  
+ 
+}
+
+.item {
+  flex: 0 0 auto;
+  
+  text-align: center;
+}
+
+.item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ccc;
+  transition: transform 0.3s;
+}
+
+.item img:hover {
+  transform: scale(1.1);
+}
+
+.item p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/*bagian kenapa haruss*/
+ .Kenapa-Harus-Laundry-Abah {
+  background-color: #f0e6d3; /* abu muda */
+  text-align: center;
+  padding: 60px 20px;
+  font-family: sans-serif;
+  margin-top: 20px;
+  border-radius: 20px ;
+}
+
+.why-choose-us h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 60px;
+  height: 3px;
+  background-color: #b38700;
+  margin: 0 auto 30px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  max-width: 200px;
+  text-align: center;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #f77f00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  overflow: hidden;
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background: linear-gradient(90deg,  #0366c2 , #f51f1f);
+  background-size: 300%;
+  margin-top: 20px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-bg {
+  width: 280px;
+  height: 280px;
+  background-color: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 350px;
+  z-index: 1;
+  position: relative;
+  margin-left: 0; 
+}
+
+.content {
+  max-width: 500px;
+}
+
+.content h2 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.content p {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.fiturs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.fitur {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  color: #f77f00;
+}
+
+
+
+/*bagian footer*/
+.footer {
+  background-color: #03375f;
+  color: white;
+  margin-top: 20px;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  color: #f7931e;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+.sosmed a {
+  color: white;
+  font-size: 18px;
+  margin-right: 12px;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.sosmed :hover {
+  color: #cdcccb; /* warna oranye saat hover */
+}
+
+
+.badge {
+  background-color: rgb(154, 56, 56);
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
